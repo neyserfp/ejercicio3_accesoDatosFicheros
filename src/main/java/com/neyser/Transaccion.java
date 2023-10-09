@@ -1,9 +1,6 @@
 package com.neyser;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Transaccion {
@@ -76,6 +73,48 @@ public class Transaccion {
     }
 
     private void verEscritores() {
+        File file1 = new File("Escritores/lista.txt");
+
+        String resultado = "";
+
+        try
+        {
+            FileReader fileReader1 = new FileReader(file1);
+            BufferedReader bufferedReader1 = new BufferedReader(fileReader1);
+            String strCurrentLine;
+
+            while ((strCurrentLine=bufferedReader1.readLine()) != null)
+            {
+                String[] parts = strCurrentLine.split("\\|");
+
+                if (Integer.parseInt(parts[2])!=0)
+                {
+                    resultado+=parts[0];
+                    resultado+="\t\t";
+                    resultado+=parts[1];
+                    resultado+="\t";
+                    resultado+=parts[2];
+                }
+
+            }
+
+            if (fileReader1 != null)
+            {
+                fileReader1.close();
+            }
+
+        } catch (FileNotFoundException e1)
+        {
+            e1.printStackTrace();
+        } catch (IOException e2)
+        {
+            e2.printStackTrace();
+        }
+
+
+        //System.out.println("TEST - "+resultado);
+
+        //return resultado;
     }
 
 }
