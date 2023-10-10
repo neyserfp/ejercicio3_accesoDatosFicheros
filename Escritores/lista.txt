@@ -1,2 +1,7 @@
-jola|dsdsada|15615Mario|16/08/2015|PeruanoJose|15/05/1990|Españoljose|15/15/2051|Italiano
-Diego|48/202/1995|Ecuatoriano
+Mario Vargas|16/08/2015|Peruano
+Jose Arguedas|15/05/1990|Español
+jose Maria|15/15/2051|Italiano
+Diego Canseco|16/02/1985|Ecuatoriano
+César Aira|28/18/1949|Argentino
+Alfonso Brezmes|05/08/1966|Español
+Silvia Colomé|28/07/1965|Española

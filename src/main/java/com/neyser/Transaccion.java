@@ -83,18 +83,19 @@ public class Transaccion {
             BufferedReader bufferedReader1 = new BufferedReader(fileReader1);
             String strCurrentLine;
 
+            System.out.println("Nombre\t\t\tNacimineto\tNacionalidad");
+
             while ((strCurrentLine=bufferedReader1.readLine()) != null)
             {
                 String[] parts = strCurrentLine.split("\\|");
 
-                if (Integer.parseInt(parts[2])!=0)
-                {
-                    resultado+=parts[0];
-                    resultado+="\t\t";
-                    resultado+=parts[1];
-                    resultado+="\t";
-                    resultado+=parts[2];
-                }
+                resultado+=parts[0];
+                resultado+="\t\t";
+                resultado+=parts[1];
+                resultado+="\t";
+                resultado+=parts[2];
+                resultado+="\n";
+
 
             }
 
@@ -111,10 +112,7 @@ public class Transaccion {
             e2.printStackTrace();
         }
 
-
-        //System.out.println("TEST - "+resultado);
-
-        //return resultado;
+        System.out.println(resultado);
     }
 
 }

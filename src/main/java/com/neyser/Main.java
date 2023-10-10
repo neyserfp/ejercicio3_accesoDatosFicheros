@@ -10,7 +10,5 @@ public class Main {
         Transaccion transaccion = new Transaccion();
         transaccion.menu();
 
-
-
     }
 }
